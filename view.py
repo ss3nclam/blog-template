@@ -8,6 +8,6 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/example")
+@app.route("/about")
 def example():
-    return render_template("example.html")
+    return render_template("about.html")
