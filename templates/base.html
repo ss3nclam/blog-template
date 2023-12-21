@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<html lang="ru">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }}</title>
-    <link type="text/css" href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet"/>
+    <title>
+        {{ title }}
+    </title>
+    {% block styles %}{% endblock %}
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
 </head>
 
@@ -18,15 +19,13 @@
                 <li class="{% if title == 'Random' %}active{% endif %}"><a href="/random">Рандомная</a></li>
             </ul>
         </nav>
-        <div style="display: flex;">
+        <div>
             <button class="search_button"></button>
             <button class="search_button"></button>
             <button class="search_button"></button>
         </div>
     </header>
-    <main>
-        {% block page_content %}{% endblock %}
-    </main>
+    {% block main %}{% endblock %}
 </body>
 
 </html>

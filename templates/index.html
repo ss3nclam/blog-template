@@ -1,22 +1,40 @@
-{% set title = 'Blog' %}
-{% set blog_posts = 'Jopa' %}
-
-
 {% extends 'base.html' %}
 
-{% block page_content %}
-<div style="margin-top: 100px; display: flex; padding: 0 calc(50% - 520px); display: flex; justify-content: right;">
-    <div style="border: 1px solid var(--border-color); border-radius: 20px; margin-right: 220px;">
-        {{ blog_posts }}
-    </div>
-    <div style="border: 1px solid var(--border-color); border-radius: 20px; position: fixed;">
-        <ul style="margin: 15px 50px; list-style-type: none;">
-            <li>Instrument 1</li>
-            <li>Instrument 2</li>
-            <li>Instrument 3</li>
-            <li>Instrument 4</li>
-            <li>Instrument 5</li>
+
+{% set title = 'Blog' %}
+
+
+{% block styles %}
+<link type="text/css" href="{{ url_for('static', filename='css/blog.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+
+{% block main %}
+<main>
+    <section class="content_bar">
+        {% for i in range(10) %}
+            <article class="post">
+                <h1>{{ i }}</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, esse explicabo?</p>
+                <p>Aspernatur libero alias sint? Fugiat accusamus, corporis eius fugit numquam nobis impedit sint et ipsam excepturi facere, aut dolor. Eum porro natus non inventore quis commodi.</p>
+                <p>Deserunt sit perspiciatis asperiores itaque nisi quis consequatur fugiat velit temporibus.</p>
+                <p>Voluptate ipsa magnam facere sapiente veniam illum repellat tempore incidunt debitis totam libero odio voluptates minus harum eum veritatis quo autem, nam explicabo quidem hic!</p>
+                <p>Quod asperiores ut illo et hic blanditiis voluptatem quae excepturi exercitationem architecto fugiat provident nisi, ad deleniti aperiam, sed aliquid harum?</p>
+                <p>Itaque atque ut dolor officiis vero laboriosam et voluptatem rerum numquam qui, quasi sed sapiente enim distinctio.</p>
+                <p>Fugit vero eveniet quia, libero quisquam cupiditate suscipit cumque deleniti, odit minus numquam. Quos voluptatum, impedit maxime porro modi nobis esse enim accusantium vel sit?</p>
+                <p>Nulla nesciunt obcaecati doloribus aut possimus modi perspiciatis voluptatibus consequuntur deserunt earum error, repudiandae tenetur assumenda beatae saepe vitae similique doloremque laudantium adipisci maiores molestiae asperiores!</p>
+                <p>Adipisci voluptates nulla tempora maiores temporibus voluptatum pariatur dolore iure, deserunt exercitationem est molestias ullam libero nostrum vero quod officia veniam rem? Quo expedita maiores dolore corrupti.</p>
+                <p>Nesciunt totam harum accusamus? Veritatis excepturi eveniet possimus, minus laudantium itaque laborum tempora facere voluptate, corporis alias eaque culpa quibusdam odit dignissimos non natus reiciendis.</p>
+            </article>
+        {% endfor %}
+    </section>
+    <aside class="sidebar">
+        <ul>
+            <li><a class="sidebar_tool" href="">Фильтры</a></li>
+            <li><a class="sidebar_tool" href="">Instrument 3</a></li>
+            <li><a class="sidebar_tool" href="">Instrument 4</a></li>
+            <li><a class="sidebar_tool" href="">Instrument 5</a></li>
         </ul>
-    </div>
-</div>
+    </aside>
+</main>
 {% endblock %}
