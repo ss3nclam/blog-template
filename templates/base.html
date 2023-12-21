@@ -5,25 +5,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
-    <link type="text/css" href="{{ url_for('static', filename='css/base.css')}}" rel="stylesheet" />
+    <link type="text/css" href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet"/>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
 </head>
 
 <body>
     <header>
-        <img class="logo" src="{{ url_for('static', filename='img/logo.png')}}" alt="logo">
+        <img class="logo" src="{{ url_for('static', filename='logo.png') }}" alt="logo">
         <nav>
-            <ul class="nav__links">
+            <ul class="nav_links">
                 <li class="{% if title == 'Blog' %}active{% endif %}"><a href="/">Блог</a></li>
                 <li class="{% if title == 'Random' %}active{% endif %}"><a href="/random">Рандомная</a></li>
             </ul>
         </nav>
         <div style="display: flex;">
-            <button class="search__button"></button>
-            <button class="search__button"></button>
-            <button class="search__button"></button>
+            <button class="search_button"></button>
+            <button class="search_button"></button>
+            <button class="search_button"></button>
         </div>
     </header>
-    {% block page_content %}{% endblock %}
+    <main>
+        {% block page_content %}{% endblock %}
+    </main>
 </body>
 
 </html>
