@@ -1,7 +1,7 @@
 @import url('base.css');
 
 main {
-    margin-top: 90px;
+    /* margin-top: 90px; */
     display: flex;
     padding: 0 calc(50% - 520px);
     justify-content: right;
