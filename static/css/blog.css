@@ -15,7 +15,7 @@ main {
     width: 200px;
     border: 1px solid var(--border-color);
     padding: 10px 10px;
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     position: fixed;
     transition: all 2s ease 0s;
 }
@@ -52,13 +52,16 @@ main {
 
 .post {
     border: 1px solid var(--border-color);
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     padding: 20px;
     margin-bottom: 35px;
     transition: all 2s ease 0s;
-
 }
 
 .post:hover {
     border-color: var(--accent-color);
+}
+
+.post p {
+    padding-bottom: 10px;
 }

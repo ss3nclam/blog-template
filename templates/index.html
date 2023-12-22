@@ -2,7 +2,14 @@
 
 
 {% set title = 'Blog' %}
-
+{% set post_text = '
+Однажды в маленьком городке жила девочка по имени Анна. У нее были каштановые волосы и глаза цвета океана. Анна была очень любознательной и всегда стремилась познать мир. Она мечтала о приключениях и о том, чтобы стать известной исследовательницей.
+Одним ярким летним днем, Анна отправилась на прогулку в лес, чтобы изучить его животный мир. Она шла по тропинке, останавливаясь время от времени, чтобы рассмотреть цветы и слушать пение птиц. Внезапно, она услышала странный шум из кустов. Анна приблизилась и обнаружила маленького птенца, запутавшегося в ветках. Она сразу поняла, что должна помочь ему.
+Анна осторожно вытащила птенца из кустов и посмотрела на его крылья. Они были слегка повреждены, и птенец не мог летать. Анна решила забрать его домой и позаботиться о нем. Она назвала его Пипо. С каждым днем Анна ухаживала за Пипо, кормила его и лечила его крылья.
+Вскоре Пипо стал здоровее и сильнее. Анна поняла, что пришло время отпустить его на свободу. Вместе они отправились в лес, где Анна открыла клетку, и Пипо взлетел в небо. Анна была счастлива, видя, как птенец летит все выше и выше.
+После этого приключения Анна поняла, что ее мечта о приключениях и исследованиях может стать реальностью. Она решила посвятить свою жизнь изучению природы и помощи животным. Анна стала известной биологом и путешествовала по всему миру, делая открытия и спасая животных
+Эта история о том, что даже маленькие действия могут привести к великим переменам. Благодаря своей любознательности и заботе, Анна стала героем в своей истории и в мире животных. И эта история напоминает нам, что каждый из нас может сделать разницу, если только мы верим в себя и следуем за своими мечтами.'
+%}
 
 {% block styles %}
 <link type="text/css" href="{{ url_for('static', filename='css/blog.css') }}" rel="stylesheet"/>
@@ -14,17 +21,10 @@
     <section class="content_bar">
         {% for i in range(10) %}
             <article class="post">
-                <h1>{{ i + 1 }}: Lorem, ipsum dolor.</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, esse explicabo?</p>
-                <p>Aspernatur libero alias sint? Fugiat accusamus, corporis eius fugit numquam nobis impedit sint et ipsam excepturi facere, aut dolor. Eum porro natus non inventore quis commodi.</p>
-                <p>Deserunt sit perspiciatis asperiores itaque nisi quis consequatur fugiat velit temporibus.</p>
-                <p>Voluptate ipsa magnam facere sapiente veniam illum repellat tempore incidunt debitis totam libero odio voluptates minus harum eum veritatis quo autem, nam explicabo quidem hic!</p>
-                <p>Quod asperiores ut illo et hic blanditiis voluptatem quae excepturi exercitationem architecto fugiat provident nisi, ad deleniti aperiam, sed aliquid harum?</p>
-                <p>Itaque atque ut dolor officiis vero laboriosam et voluptatem rerum numquam qui, quasi sed sapiente enim distinctio.</p>
-                <p>Fugit vero eveniet quia, libero quisquam cupiditate suscipit cumque deleniti, odit minus numquam. Quos voluptatum, impedit maxime porro modi nobis esse enim accusantium vel sit?</p>
-                <p>Nulla nesciunt obcaecati doloribus aut possimus modi perspiciatis voluptatibus consequuntur deserunt earum error, repudiandae tenetur assumenda beatae saepe vitae similique doloremque laudantium adipisci maiores molestiae asperiores!</p>
-                <p>Adipisci voluptates nulla tempora maiores temporibus voluptatum pariatur dolore iure, deserunt exercitationem est molestias ullam libero nostrum vero quod officia veniam rem? Quo expedita maiores dolore corrupti.</p>
-                <p>Nesciunt totam harum accusamus? Veritatis excepturi eveniet possimus, minus laudantium itaque laborum tempora facere voluptate, corporis alias eaque culpa quibusdam odit dignissimos non natus reiciendis.</p>
+                <h1>{{ i + 1 }}: Random title</h1>
+                {% for p in post_text.split('\n') %}
+                    <p>{{ p }}</p>
+                {% endfor %}
             </article>
         {% endfor %}
     </section>
