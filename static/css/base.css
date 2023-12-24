@@ -4,6 +4,7 @@
     --accent-color: #df6161;
     --border-color: #343a40;
     --border-radius: 20px;
+    --scroll-bar-color: var(--border-color);
 }
 
 ::-webkit-scrollbar {
@@ -11,7 +12,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--border-color);
+    background: var(--scroll-bar-color);
     border-radius: 5px;
 }
 
@@ -111,5 +112,6 @@ li, a, button {
 }
 
 body {
+    background-color: unset;
     padding-top: 90px;
 }

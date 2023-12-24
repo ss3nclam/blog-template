@@ -1,14 +1,19 @@
 @import url('base.css');
 
+:root {
+    --post-content-max-size: 400px;
+}
+
 main {
-    /* margin-top: 90px; */
     display: flex;
     padding: 0 calc(50% - 520px);
     justify-content: right;
+    background-color: unset;
 }
 
 .content_bar {
     margin-right: 220px;
+    background-color: unset;
 }
 
 .sidebar {
@@ -50,28 +55,56 @@ main {
     transition: all 0.3s ease 0s;
 }
 
+@media (max-width: 1000px) {
+    .sidebar {
+        display: none;
+    }
+
+    .content_bar {
+        margin-right: 0;
+    }
+}
+
 .post_block {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 20px;
     margin-bottom: 35px;
     transition: all 2s ease 0s;
+    background-color: unset;
+    ::selection {
+        color: var(--background-color);
+        background-color: var(--accent-color);
+    }
 }
 
 .post_block:hover {
     border-color: var(--accent-color);
 }
 
+.post_title {
+    padding-bottom: 30px;
+    font-size: 2rem;
+}
+
 .post_block p {
+    /* text-indent: 25px; */
     padding-bottom: 10px;
+    background-color: unset;
 }
 
 .post_content {
-    max-height: 300px;
+    max-height: var(--post-content-max-size);
     overflow-y: hidden;
     transition: all 2s ease 0s;
+    z-index: -1;
+    position: relative;
+    background-color: unset;
+}
 
-    /* background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 75%) */
+.post_content_shadow {
+    background: linear-gradient(0deg, var(--background-color) 0%, #00000000 25%);
+    cursor: text;
 }
 
 .readmore_block {
@@ -82,12 +115,34 @@ main {
 }
 
 .readmore_btn {
+    background-color: unset;
     border: none;
-    transition: all 1s ease 0s;
     cursor: pointer;
+    transition: all 1s ease 0s;
 }
+
+/* @keyframes amin {
+    80% { color: var(--accent-color) }
+    100% { color: currentColor }
+  } */
 
 .readmore_btn:hover {
     color: var(--accent-color);
-    transform: scale(1.05);
+    transform: scale(1.02);
+    /* animation: amin 6s infinite; */
+}
+
+.footbar_post_button {
+    color: #565c63;
+    padding: 10px 10px;
+    margin-left: 5px;
+    border: 2px solid;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 1s ease 0s;
+}
+
+.footbar_post_button:hover{
+    border-color: var(--accent-color);
+    transform: scale(1.1)
 }
