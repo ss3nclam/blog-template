@@ -2,6 +2,7 @@
 
 
 {% set title = 'Blog' %}
+
 {% set post_text = '
 Однажды в маленьком городке жила девочка по имени Анна. У нее были каштановые волосы и глаза цвета океана. Анна была очень любознательной и всегда стремилась познать мир. Она мечтала о приключениях и о том, чтобы стать известной исследовательницей.
 Одним ярким летним днем, Анна отправилась на прогулку в лес, чтобы изучить его животный мир. Она шла по тропинке, останавливаясь время от времени, чтобы рассмотреть цветы и слушать пение птиц. Внезапно, она услышала странный шум из кустов. Анна приблизилась и обнаружила маленького птенца, запутавшегося в ветках. Она сразу поняла, что должна помочь ему.
@@ -19,15 +20,25 @@
 {% block main %}
 <main>
     <section class="content_bar">
-        {% for i in range(10) %}
-            <article class="post">
-                <h1>{{ i + 1 }}: Random title</h1>
-                {% for p in post_text.split('\n') %}
-                    <p>{{ p }}</p>
-                {% endfor %}
-                <a class="readmore_btn" href=""">Читать дальше</a>
+            {% for post_id in range(3) %}
+            <article class="post_block" post_id="{{ post_id }}">
+                <h1>Post {{ post_id }}</h1>
+                <div class="post_content" id="post_{{ post_id }}_content">
+                    {% for p in post_text.split('\n') %}
+                        <p>{{ p }}</p>
+                    {% endfor %}
+                </div>
+                <div id="post_{{ post_id }}_readmore_block" class="readmore_block">
+                    <button id="post_{{ post_id }}_readmore_btn" class="readmore_btn">Показать полностью</button>
+                    <div>
+                        <button class="search_button"></button>
+                        <button class="search_button"></button>
+                        <button class="search_button"></button>
+                    </div>
+                </div>
             </article>
-        {% endfor %}
+            {% endfor %}
+            <script src="{{ url_for('static', filename='js/readmore.js') }}"></script>
     </section>
     <aside class="sidebar">
         <ul>

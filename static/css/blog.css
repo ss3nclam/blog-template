@@ -50,7 +50,7 @@ main {
     transition: all 0.3s ease 0s;
 }
 
-.post {
+.post_block {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     padding: 20px;
@@ -58,10 +58,36 @@ main {
     transition: all 2s ease 0s;
 }
 
-.post:hover {
+.post_block:hover {
     border-color: var(--accent-color);
 }
 
-.post p {
+.post_block p {
     padding-bottom: 10px;
+}
+
+.post_content {
+    max-height: 300px;
+    overflow-y: hidden;
+    transition: all 2s ease 0s;
+
+    /* background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff 75%) */
+}
+
+.readmore_block {
+    display: flex;
+    padding-top: 5px;
+    justify-content: space-between;
+    transition: all 2s ease 0s;
+}
+
+.readmore_btn {
+    border: none;
+    transition: all 1s ease 0s;
+    cursor: pointer;
+}
+
+.readmore_btn:hover {
+    color: var(--accent-color);
+    transform: scale(1.05);
 }
