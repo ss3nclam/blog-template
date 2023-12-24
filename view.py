@@ -1,7 +1,7 @@
 from flask import render_template
 
 from app import app
-from tests.posts_generator import generate_posts
+from dev_tools.post_generator import generate_posts
 
 
 @app.route("/")
