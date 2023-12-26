@@ -8,9 +8,10 @@
     </title>
     {% block styles %}{% endblock %}
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
-<body id="main">
+<body class="dark-theme">
     <header>
         <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
         <nav>
@@ -19,13 +20,17 @@
                 <li class="{% if title == 'Random' %}active{% endif %}"><a href="/random">Рандомная</a></li>
             </ul>
         </nav>
-        <div>
-            <button class="search_button"></button>
-            <button class="search_button"></button>
-            <button class="search_button"></button>
+        <div id="nav_buttons_block">
+            <button type="button" id="color_scheme_switcher" class="search_button">
+                <i id="color_scheme_switcher_icon" class="bi bi-moon-stars-fill"></i>
+            </button>
+            <button type="button" class="search_button"></button>
+            <button type="button" class="search_button"></button>
+            <button type="button" class="search_button"></button>
         </div>
     </header>
     {% block main %}{% endblock %}
+    <script src="{{ url_for('static', filename='js/color_scheme.js') }}"></script>
     <script src="{{ url_for('static', filename='js/readmore.js') }}"></script>
     <script src="{{ url_for('static', filename='js/scrollbar_thumb_color.js') }}"></script>
 </body>

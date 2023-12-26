@@ -1,10 +1,6 @@
 :root {
-    --font-color: #999999;
-    --background-color: #212529;
-    --accent-color: #df6161;
-    --border-color: #343a40;
     --border-radius: 20px;
-    --scroll-bar-color: var(--border-color);
+    --time-color-scheme-changing: 2s;
 }
 
 ::-webkit-scrollbar {
@@ -26,12 +22,30 @@
     margin: 0;
     padding: 0;
     color: var(--font-color);
-    background-color: var(--background-color);
     scroll-behavior: smooth;
+    background-color: unset;
+    transition: all var(--time-color-scheme-changing) ease 0s;
+}
+
+body {    
+    padding-top: 90px;
+    background-color: var(--background-color);
+}
+
+body header {
+    transition:
+        box-shadow var(--time-color-scheme-changing) ease 0s,
+        border 2s ease 0s;
+}
+
+body.dark-theme header {
+    transition:
+        box-shadow var(--time-color-scheme-changing) ease 0s,
+        border 2s ease 0s;
 }
 
 header {
-    background-color: var(--background-color);
+    background-color: inherit;
     box-shadow: 0px 5px 20px var(--background-color);
     display: flex;
     justify-content: space-between;
@@ -41,11 +55,10 @@ header {
     height: 65px;
     border-bottom: 1px solid var(--border-color);
     position: fixed;
-    transition: all 2s ease 0s;
     top: 0;
 }
 
-header:hover{
+header:hover {
     border-color: var(--accent-color);
 }
 
@@ -58,6 +71,16 @@ li, a, button {
 .logo {
     cursor: pointer;
     height: 33px;
+}
+
+@media (max-width: 1000px) {
+    .logo {
+        display: none;
+    }
+}
+
+#nav_buttons_block {
+    display: flex;
 }
 
 .nav_links {
@@ -97,21 +120,27 @@ li, a, button {
 }
 
 .search_button {
-    color: #565c63;
-    padding: 15px 15px;
+    background-color: #00000000;
+    height: 35px;
+    width: 35px;
     margin-left: 10px;
-    border: 2px solid;
+    border: 2px solid var(--border-color);
     border-radius: 50px;
     cursor: pointer;
-    transition: all 1s ease 0s;
+    transition:
+        border 1s ease 0s,
+        transform 1s ease 0s;
 }
 
-.search_button:hover{
+.search_button:hover {
     border-color: var(--accent-color);
-    transform: scale(1.1)
+    transform: scale(1.1);
 }
 
-body {
-    background-color: unset;
-    padding-top: 90px;
+#color_scheme_switcher i {
+    transition: color var(--time-color-scheme-changing) ease 0s;
+}
+
+#color_scheme_switcher:hover i {
+    color: var(--accent-color);
 }

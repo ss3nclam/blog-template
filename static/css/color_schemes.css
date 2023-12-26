@@ -1,0 +1,20 @@
+
+/* Light scheme */
+body {
+    --font-color: #3a3a3a;
+    --background-color: #ffffff;
+    --accent-color: #ce0000;
+    --buttons-border-color: #565c63;
+    --border-color: #3a3a3a;
+    --scroll-bar-color: var(--border-color);
+}
+
+/* Dark scheme */
+body.dark-theme {
+    --font-color: #999999;
+    --background-color: #212529;
+    --accent-color: #df6161;
+    --buttons-border-color: #565c63;
+    --border-color: #343a40;
+    --scroll-bar-color: var(--border-color);
+}

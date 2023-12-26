@@ -6,7 +6,7 @@ from dev_tools.post_generator import generate_posts
 
 @app.route("/")
 def index():
-    return render_template("index.html", posts=generate_posts(5))
+    return render_template("index.html", posts=generate_posts(10))
 
 
 @app.route("/random")

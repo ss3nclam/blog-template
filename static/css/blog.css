@@ -1,3 +1,4 @@
+@import url('color_schemes.css');
 @import url('base.css');
 
 :root {
@@ -8,24 +9,28 @@ main {
     display: flex;
     padding: 0 calc(50% - 520px);
     justify-content: right;
-    background-color: unset;
+}
+
+* {
+    transition: all 2s ease 0s;
 }
 
 .content_bar {
     margin-right: 220px;
-    background-color: unset;
+    transition: width 2s ease 0s;
 }
 
-.sidebar {
+body .sidebar {
     width: 200px;
     border: 1px solid var(--border-color);
     padding: 10px 10px;
     border-radius: var(--border-radius);
     position: fixed;
-    transition: all 2s ease 0s;
+    transition: border 2s ease 0s, background var(--time-color-scheme-changing) ease 0s;
+    background-color: var(--background-color);
 }
 
-.sidebar:hover {
+body .sidebar:hover {
     border-color: var(--accent-color);
 }
 
@@ -41,7 +46,7 @@ main {
 }
 
 .sidebar_tool {
-    color: var(--border-color);
+    color: var(--buttons-border-color);
     transition: all 1s ease 0s;
 }
 
@@ -56,13 +61,8 @@ main {
 }
 
 @media (max-width: 1000px) {
-    .sidebar {
-        display: none;
-    }
-
-    .content_bar {
-        margin-right: 0;
-    }
+    .sidebar {display: none;}
+    .content_bar {margin-right: 0;}
 }
 
 .post_block {
@@ -88,10 +88,17 @@ main {
 }
 
 .post_block p {
-    /* text-indent: 25px; */
     padding-bottom: 10px;
     background-color: unset;
 }
+
+body main section article .post_content_shadow {
+    cursor: text;
+    background: linear-gradient(0deg, var(--background-color) 0%, #00000000 25%);
+}
+
+body.dark-theme main section article .post_content_shadow {
+    background: linear-gradient(0deg, var(--background-color) 0%, #00000000 25%);}
 
 .post_content {
     max-height: var(--post-content-max-size);
@@ -102,16 +109,10 @@ main {
     background-color: unset;
 }
 
-.post_content_shadow {
-    background: linear-gradient(0deg, var(--background-color) 0%, #00000000 25%);
-    cursor: text;
-}
-
 .readmore_block {
     display: flex;
     padding-top: 5px;
     justify-content: space-between;
-    transition: all 2s ease 0s;
 }
 
 .readmore_btn {
@@ -121,19 +122,13 @@ main {
     transition: all 1s ease 0s;
 }
 
-/* @keyframes amin {
-    80% { color: var(--accent-color) }
-    100% { color: currentColor }
-  } */
-
 .readmore_btn:hover {
     color: var(--accent-color);
     transform: scale(1.02);
-    /* animation: amin 6s infinite; */
 }
 
 .footbar_post_button {
-    color: #565c63;
+    color: var(--buttons-border-color);
     padding: 10px 10px;
     margin-left: 5px;
     border: 2px solid;
@@ -144,5 +139,5 @@ main {
 
 .footbar_post_button:hover{
     border-color: var(--accent-color);
-    transform: scale(1.1)
+    transform: scale(1.1);
 }
