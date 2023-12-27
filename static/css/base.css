@@ -1,4 +1,5 @@
 :root {
+    --accent-color: #df6161;
     --border-radius: 20px;
     --time-color-scheme-changing: 2s;
 }
@@ -79,7 +80,7 @@ li, a, button {
     }
 }
 
-#nav_buttons_block {
+.nav_btns {
     display: flex;
 }
 
@@ -119,7 +120,7 @@ li, a, button {
     color: var(--accent-color);
 }
 
-.search_button {
+.nav_btn {
     background-color: #00000000;
     height: 35px;
     width: 35px;
@@ -132,15 +133,15 @@ li, a, button {
         transform 1s ease 0s;
 }
 
-.search_button:hover {
+.nav_btn a {
+    transition: color var(--time-color-scheme-changing) ease 0s;
+}
+
+.nav_btn:hover {
     border-color: var(--accent-color);
     transform: scale(1.1);
 }
 
-#color_scheme_switcher i {
-    transition: color var(--time-color-scheme-changing) ease 0s;
-}
-
-#color_scheme_switcher:hover i {
+.nav_btn:hover a {
     color: var(--accent-color);
 }
