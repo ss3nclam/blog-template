@@ -6,6 +6,7 @@
     margin-bottom: 35px;
     transition: all 2s ease 0s;
     background-color: unset;
+
     ::selection {
         color: var(--background-color);
         background-color: var(--accent-color);
@@ -131,7 +132,7 @@ body.dark-theme .post_content_shadow {
     border: 2px solid var(--border-color);
     cursor: pointer;
     transition: all 1s ease 0s;
-    
+
     border: none;
 }
 
