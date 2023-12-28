@@ -1,4 +1,5 @@
 :root {
+    /* --accent-color: MediumPurple; */
     --accent-color: #df6161;
     --border-radius: 20px;
     --time-color-scheme-changing: 2s;
@@ -33,12 +34,6 @@ body {
     background-color: var(--background-color);
 }
 
-body header {
-    transition:
-        box-shadow var(--time-color-scheme-changing) ease 0s,
-        border 2s ease 0s;
-}
-
 body.dark-theme header {
     transition:
         box-shadow var(--time-color-scheme-changing) ease 0s,
@@ -57,6 +52,10 @@ header {
     border-bottom: 1px solid var(--border-color);
     position: fixed;
     top: 0;
+    z-index: 2;
+    transition:
+        box-shadow var(--time-color-scheme-changing) ease 0s,
+        border 2s ease 0s;
 }
 
 header:hover {
@@ -124,7 +123,7 @@ li, a, button {
     background-color: #00000000;
     height: 35px;
     width: 35px;
-    margin-left: 10px;
+    margin-left: 12px;
     border: 2px solid var(--border-color);
     border-radius: 50px;
     cursor: pointer;

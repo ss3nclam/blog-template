@@ -1,25 +1,20 @@
 const array = Array.from(document.getElementsByClassName('post_block'));
 
-array.forEach(function(post) {
-    let post_id = post.attributes.post_id.value;
-    let container = document.getElementById("post_" + post_id + "_content");
-    let button = document.getElementById("post_" + post_id + "_readmore_btn");
-    let btn_block = document.getElementById("post_" + post_id + "_readmore_block");
-    let content_shadow = document.getElementById("post_" + post_id + "_content_shadow");
 
-    let scroll_height = container.scrollHeight;
-    let max_height = +window.getComputedStyle(container).maxHeight.replace('px', '');
+array.forEach((post) => {
+    let content = post.getElementsByClassName('post_content')[0];
+    let scroll_height = content.scrollHeight;
+    let max_height = +window.getComputedStyle(content).maxHeight.replace('px', '');
 
-    if (max_height < scroll_height) {
-        button.addEventListener("click", function() {
-            container.style.maxHeight = scroll_height + "px";
-            button.style.opacity = 0;
-            button.style.cursor = 'default';
-            content_shadow.style.background = 'unset';
-        });
+    let readmore = post.getElementsByClassName('readmore_btn')[0];
+
+
+    if (scroll_height < max_height * 2 ? true : false) {
+        post.classList.add('content_acceptable');
     } else {
-        content_shadow.style.background = 'unset';
-        button.style.display = 'none';
-        btn_block.style.justifyContent = 'right';
-    }
-});
+        post.classList.add('content_minimised');
+        readmore.addEventListener("click", function() {
+            post.classList.remove('content_minimised');
+            post.classList.add('content_maximised');
+            content.style.maxHeight = scroll_height + "px";
+})}});

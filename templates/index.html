@@ -15,20 +15,19 @@
         {% for post in posts %}
         <article class="post_block" post_id="{{ post.id }}">
             <h1 class="post_title">{{ post.title }}</h1>
-            <div class="post_content_shadow" id="post_{{ post.id }}_content_shadow">
-                <div class="post_content" id="post_{{ post.id }}_content">
+                <div class="post_content">
                     {% for p in post.content.split('\n') %}
                     <p>{{ p }}</p>
                     {% endfor %}
                 </div>
-            </div>
-            <div id="post_{{ post.id }}_readmore_block" class="readmore_block">
-                <button id="post_{{ post.id }}_readmore_btn" class="readmore_btn">Показать полностью →</button>
-                <div>
-                    <button type="button" class="post_footbar_btn"><i class="bi bi-chat-square-text-fill" href="post/{{ post.id }}"></i></button>
-                    <button type="button" class="post_footbar_btn"><i class="bi bi-bookmark-fill" href=""></i></button>
-                    <button type="button" class="post_footbar_btn"><i class="bi bi-share-fill" href=""></i></button>
-                </div>
+            <div class="post_content_shadow"></div>
+            <div class="post_footbar">
+                <button class="readmore_btn">Показать полностью →</button>
+                <ul class="post_footbar_btns">
+                    <a class="post_footbar_btn bi bi-chat-square-text-fill" href="post/{{ post.id }}"></a>
+                    <a class="post_footbar_btn bi bi-bookmark-fill" href=""></a>
+                    <a class="post_footbar_btn bi bi-share-fill" href=""></a>
+                </ul>
             </div>
         </article>
         {% endfor %}

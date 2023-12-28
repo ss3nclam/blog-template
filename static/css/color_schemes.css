@@ -1,8 +1,8 @@
 :root {
-    --font-color: #3a3a3a;
+    --font-color: #505050;
     --background-color: #ffffff;
-    --btns-border-color: #565c63;
-    --border-color: #3a3a3a;
+    --btns-border-color: #afafaf;
+    --border-color: #999999;
 }
 
 :root .dark-theme {
