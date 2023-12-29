@@ -1,3 +1,7 @@
+:root {
+    --post-content-max-size: 400px;
+}
+
 .post_block {
     position: relative;
     border: 1px solid var(--border-color);

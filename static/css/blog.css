@@ -2,10 +2,6 @@
 @import url('base.css');
 @import url('post.css');
 
-:root {
-    --post-content-max-size: 600px;
-}
-
 main {
     display: flex;
     flex-direction: row;
@@ -67,6 +63,11 @@ body .sidebar:hover {
 }
 
 @media (max-width: 1000px) {
-    .sidebar {display: none;}
-    .content_bar {margin-right: 0;}
+    .sidebar {
+        display: none;
+    }
+
+    .content_bar {
+        margin-right: 0;
+    }
 }

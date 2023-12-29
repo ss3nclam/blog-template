@@ -29,7 +29,7 @@
     transition: all var(--time-color-scheme-changing) ease 0s;
 }
 
-body {    
+body {
     padding-top: 90px;
     background-color: var(--background-color);
 }
@@ -62,7 +62,9 @@ header:hover {
     border-color: var(--accent-color);
 }
 
-li, a, button {
+li,
+a,
+button {
     font-weight: 500;
     font-size: 16px;
     text-decoration: none;

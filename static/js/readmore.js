@@ -13,8 +13,10 @@ array.forEach((post) => {
         post.classList.add('content_acceptable');
     } else {
         post.classList.add('content_minimised');
-        readmore.addEventListener("click", function() {
+        readmore.addEventListener("click", function () {
             post.classList.remove('content_minimised');
             post.classList.add('content_maximised');
             content.style.maxHeight = scroll_height + "px";
-})}});
+        })
+    }
+});
