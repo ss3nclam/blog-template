@@ -1,3 +1,6 @@
+@import url('themes.css');
+
+
 :root {
     --accent-color: #df6161;
     --border-radius: 20px;

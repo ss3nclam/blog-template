@@ -16,13 +16,13 @@
         <article class="post_block" post_id="{{ post.id }}">
             <h1 class="post_title">{{ post.title }}</h1>
                 <div class="post_content">
-                    {% for p in post.content.split('\n') %}
-                    <p>{{ p }}</p>
+                    {% for paragraph in post.content.split('\n') %}
+                    <p>{{ paragraph }}</p>
                     {% endfor %}
                 </div>
             <div class="post_content_shadow"></div>
             <div class="post_footbar">
-                <button class="readmore_btn">Показать полностью →</button>
+                <button class="readmore_btn">Показать полностью...</button>
                 <ul class="post_footbar_btns">
                     <a class="post_footbar_btn bi bi-chat-square-text-fill" href="post/{{ post.id }}"></a>
                     <a class="post_footbar_btn bi bi-bookmark-fill" href=""></a>
@@ -34,10 +34,10 @@
     </section>
     <aside class="sidebar">
         <ul>
-            <li><a class="sidebar_tool" href="">Фильтры</a></li>
-            <li><a class="sidebar_tool" href="">Instrument 3</a></li>
-            <li><a class="sidebar_tool" href="">Instrument 4</a></li>
-            <li><a class="sidebar_tool" href="#main">Instrument 5</a></li>
+            <h4 style="justify-content: center; display: flex; padding-bottom: 15px; cursor: default;">Sidebar tools<h4/>
+            <li><a class="sidebar_tool" href="">First tool</a></li>
+            <li><a class="sidebar_tool" href="">Second tool</a></li>
+            <li><a class="sidebar_tool" href="">Third tool</a></li>
         </ul>
     </aside>
 </main>

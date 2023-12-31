@@ -16,14 +16,13 @@
         <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
         <nav>
             <ul class="nav_links">
-                <li class="{% if title == 'Blog' %}active{% endif %}"><a href="/">Блог</a></li>
-                <li class="{% if title == 'Random' %}active{% endif %}"><a href="/random">Рандомная</a></li>
+                <li class="{% if title == 'Blog' %}active{% endif %}"><a href="/blog">Blog</a></li>
+                <li class="{% if title == 'Some page' %}active{% endif %}"><a href="/some_page">Some page</a></li>
             </ul>
         </nav>
         <div class="nav_btns">
             <button type="button" class="nav_btn"><a class="bi bi-search"></a></button>
             <button type="button" id="color_scheme_switcher" class="nav_btn"><a id="color_scheme_switcher_icon" class="bi bi-moon-stars-fill"></a></button>
-            <button type="button" class="nav_btn"><a class="bi bi-gear-fill"></a></button>
             <button type="button" class="nav_btn"><a class="bi bi-person-fill"></a></button>
         </div>
     </header>

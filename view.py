@@ -4,11 +4,11 @@ from app import app
 from dev_tools.post_generator import generate_posts
 
 
-@app.route("/")
-def index():
-    return render_template("index.html", posts=generate_posts(10))
+@app.route("/blog")
+def blog():
+    return render_template("blog.html", posts=generate_posts(10))
 
 
-@app.route("/random")
-def random():
-    return render_template("random.html")
+@app.route("/some_page")
+def some_page():
+    return render_template("some_page.html")
