@@ -1,9 +1,12 @@
+:root {
+    --scroll-bar-color: var(--border-color);
+}
+
 body {
     --font-color: #505050;
     --background-color: #ffffff;
     --btns-border-color: #afafaf;
     --border-color: #999999;
-    --scroll-bar-color: var(--border-color);
 }
 
 body.dark-theme {
@@ -11,5 +14,4 @@ body.dark-theme {
     --background-color: #212529;
     --btns-border-color: #565c63;
     --border-color: #343a40;
-    --scroll-bar-color: red;
 }
