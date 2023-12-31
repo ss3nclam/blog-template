@@ -1,8 +1,8 @@
 :root {
-    /* --accent-color: MediumPurple; */
     --accent-color: #df6161;
     --border-radius: 20px;
     --time-color-scheme-changing: 2s;
+    --scroll-bar-color: var(--border-color);
 }
 
 ::-webkit-scrollbar {

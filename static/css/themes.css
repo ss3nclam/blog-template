@@ -1,7 +1,3 @@
-:root {
-    --scroll-bar-color: var(--border-color);
-}
-
 body {
     --font-color: #505050;
     --background-color: #ffffff;

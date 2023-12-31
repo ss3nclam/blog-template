@@ -1,7 +1,11 @@
+function thumbColor(color) {
+    document.body.style.setProperty('--scroll-bar-color', `var(${color})`);
+};
+
 document.onscroll = function () {
-    document.body.style.setProperty('--scroll-bar-color', 'var(--accent-color)');
+    thumbColor('--accent-color');
 };
 
 document.onscrollend = function () {
-    document.body.style.setProperty('--scroll-bar-color', 'var(--border-color)');
+    thumbColor('--border-color');
 };
