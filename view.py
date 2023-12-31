@@ -4,6 +4,7 @@ from app import app
 from dev_tools.post_generator import generate_posts
 
 
+@app.route('/')
 @app.route("/blog")
 def blog():
     return render_template("blog.html", posts=generate_posts(10))
