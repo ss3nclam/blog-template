@@ -1,7 +1,5 @@
 from flask import Flask
-
-# from config import AppConfig
-
+from config import config
 
 app = Flask(__name__)
-# app.config.from_object(AppConfig())
+app.config.from_mapping(config['Flask'])

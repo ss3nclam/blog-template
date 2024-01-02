@@ -3,4 +3,4 @@ from app import app
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=666)
+    app.run(port=app.config.get('PORT'))
