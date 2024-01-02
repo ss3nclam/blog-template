@@ -3,4 +3,4 @@ from app import app
 
 
 if __name__ == "__main__":
-    app.run(port=app.config.get('PORT'))
+    app.run(app.config.get('HOST'), app.config.get('PORT'))

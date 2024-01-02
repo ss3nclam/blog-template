@@ -1,3 +1,4 @@
 Flask:
+  HOST: localhost
+  PORT: 666
   DEBUG: true
-  PORT: 6666
