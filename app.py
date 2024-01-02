@@ -1,5 +1,6 @@
 from flask import Flask
-from config import config
+from settings import config
+
 
 app = Flask(__name__)
 app.config.from_mapping(config['Flask'])
