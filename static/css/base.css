@@ -76,6 +76,7 @@ button {
 .logo {
     cursor: pointer;
     height: 33px;
+    padding-left: 20px;
 }
 
 @media (max-width: 1000px) {
@@ -86,6 +87,7 @@ button {
 
 .nav_btns {
     display: flex;
+    padding-right: 20px;
 }
 
 .nav_links {
