@@ -22,7 +22,7 @@
                 </div>
             <div class="post_content_shadow"></div>
             <div class="post_footbar">
-                <button class="readmore_btn">Показать полностью...</button>
+                <button class="readmore_btn">Read more...</button>
                 <ul class="post_footbar_btns">
                     <a class="post_footbar_btn bi bi-chat-square-text-fill" href="post/{{ post.id }}"></a>
                     <a class="post_footbar_btn bi bi-bookmark-fill" href=""></a>
@@ -32,13 +32,20 @@
         </article>
         {% endfor %}
     </section>
-    <aside class="sidebar">
-        <ul>
-            <h4 style="justify-content: center; display: flex; padding-bottom: 15px; cursor: default;">Sidebar tools<h4/>
-            <li><a class="sidebar_tool" href="">First tool</a></li>
-            <li><a class="sidebar_tool" href="">Second tool</a></li>
-            <li><a class="sidebar_tool" href="">Third tool</a></li>
-        </ul>
+    <aside hidden class="sidebar">
+        <nav class="sidebar_links">
+            <h3>Links</h3>
+            <div class="sidebar_links_list">
+                <a class="sidebar_link" href="#bookmarks"><i class="bi bi-bookmarks"></i>Bookmarks</a>
+                <a class="sidebar_link" href="#comments"><i class="bi bi-chat-square-text"></i>Comments</a>
+                <a class="sidebar_link" href=""><i class="bi bi-link"></i>Third link</a>
+                <a class="sidebar_link" href=""><i class="bi bi-link"></i>Fourth link</a>
+                <a class="sidebar_link" href=""><i class="bi bi-link"></i>Fifth link</a>
+            </div>
+        </nav>
+        <a class="sidebar_create_post" href="/add_post" target="_blank">
+            <i class="bi bi-plus-lg"></i><span>Add post</span>
+        </a>
     </aside>
 </main>
 {% endblock %}
