@@ -1,4 +1,4 @@
-.sidebar {
+#sidebar {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,15 +12,16 @@
 }
 
 @media (max-width: 1000px) {
-    .sidebar {
+    #sidebar {
         display: none;
     }
 }
 
-.sidebar_links {
+#sidebar-block-links {
     width: 200px;
     height: max-content;
     padding: 15px;
+    margin-bottom: 20px;
 
     display: flex;
     flex-direction: column;
@@ -30,15 +31,15 @@
     border-radius: 20px;
 }
 
-.sidebar_links:hover {
+#sidebar-block-links:hover {
     border-color: var(--accent-color);
 }
 
-.sidebar_links:hover .sidebar_links_list {
+#sidebar-block-links:hover .sidebar_links_list {
     color: var(--font-color);
 }
 
-.sidebar_links h3 {
+#sidebar-block-links h3 {
     align-self: center;
     cursor: default;
 }
@@ -71,9 +72,11 @@
     color: var(--accent-color);
 }
 
-.sidebar_create_post {
+#sidebar-btn-addpost {
+    width: 200px;
+
     padding: 15px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 
     display: flex;
     flex-direction: row;
@@ -85,7 +88,7 @@
     border-radius: 20px;
 }
 
-.sidebar_create_post i {
+#sidebar-btn-addpost i {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,21 +96,21 @@
     transition: transform 1s, color 2s;
 }
 
-.sidebar_create_post span {
+#sidebar-btn-addpost span {
     margin-left: 10px;
 }
 
-.sidebar_create_post:hover {
+#sidebar-btn-addpost:hover {
     color: var(--accent-color);
     border-color: var(--accent-color);
 }
 
-.sidebar_create_post:hover i {
+#sidebar-btn-addpost:hover i {
     color: var(--accent-color);
     transform: rotate(0.5turn);
 }
 
-.sidebar_create_post:hover span {
+#sidebar-btn-addpost:hover span {
     color: var(--accent-color);
     transform: scale(1.05);
 }
