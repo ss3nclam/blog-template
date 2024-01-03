@@ -13,3 +13,8 @@ def blog():
 @app.route("/some_page")
 def some_page():
     return render_template("some_page.html")
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
