@@ -121,7 +121,6 @@ body.dark-theme .post_content_shadow {
     justify-content: right;
     background-color: var(--background-color);
     position: absolute;
-    padding-right: 20px;
     z-index: 1;
     bottom: 10px;
     right: 20px;
@@ -145,7 +144,6 @@ body.dark-theme .post_content_shadow {
 }
 
 .post_footbar_btns {
-    width: 100px;
     display: flex;
     justify-content: space-between;
     margin-top: auto;
@@ -159,6 +157,7 @@ body.dark-theme .post_content_shadow {
     transition: all 1s ease 0s;
 
     border: none;
+    margin-left: 20px;
 }
 
 .post_footbar_btn:hover {
