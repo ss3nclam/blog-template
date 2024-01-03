@@ -24,26 +24,27 @@
             <div class="post_footbar">
                 <button class="readmore_btn">Read more...</button>
                 <ul class="post_footbar_btns">
-                    <a class="post_footbar_btn bi bi-chat-square-text-fill" href="post/{{ post.id }}"></a>
-                    <a class="post_footbar_btn bi bi-bookmark-fill" href=""></a>
-                    <a class="post_footbar_btn bi bi-share-fill" href=""></a>
+                    <a class="post_footbar_btn bi bi-share" href=""></a>
+                    <a class="post_footbar_btn bi bi-chat-square-text" href="post/{{ post.id }}"></a>
+                    <a class="post_footbar_btn bi bi-bookmark" href=""></a>
+                    <a class="post_footbar_btn bi bi-heart" href=""></a>
                 </ul>
             </div>
         </article>
         {% endfor %}
     </section>
-    <aside hidden class="sidebar">
-        <nav class="sidebar_links">
+    <aside id="sidebar">
+        <nav id="sidebar-block-links">
             <h3>Links</h3>
-            <div class="sidebar_links_list">
+            <ul class="sidebar_links_list">
+                <a class="sidebar_link" href="#liked"><i class="bi bi-heart"></i>Liked</a>
                 <a class="sidebar_link" href="#bookmarks"><i class="bi bi-bookmarks"></i>Bookmarks</a>
                 <a class="sidebar_link" href="#comments"><i class="bi bi-chat-square-text"></i>Comments</a>
-                <a class="sidebar_link" href=""><i class="bi bi-link"></i>Third link</a>
                 <a class="sidebar_link" href=""><i class="bi bi-link"></i>Fourth link</a>
                 <a class="sidebar_link" href=""><i class="bi bi-link"></i>Fifth link</a>
-            </div>
+            </ul>
         </nav>
-        <a class="sidebar_create_post" href="/add_post" target="_blank">
+        <a id="sidebar-btn-addpost" href="/add_post" target="_blank">
             <i class="bi bi-plus-lg"></i><span>Add post</span>
         </a>
     </aside>
