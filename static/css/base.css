@@ -42,13 +42,13 @@ body {
     background-color: var(--background-color);
 }
 
-body.dark-theme .navbar {
+body.dark-theme #navbar {
     transition:
         box-shadow var(--time-color-scheme-changing) ease 0s,
         border 2s ease 0s;
 }
 
-.navbar {
+#navbar {
     background-color: inherit;
     box-shadow: 0px 5px 20px var(--background-color);
     display: flex;
@@ -66,7 +66,7 @@ body.dark-theme .navbar {
         border 2s ease 0s;
 }
 
-.navbar:hover {
+#navbar:hover {
     border-color: var(--accent-color);
 }
 
